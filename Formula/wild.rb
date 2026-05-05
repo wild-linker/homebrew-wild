@@ -6,10 +6,12 @@ class Wild < Formula
   depends_on :linux
 
   on_linux do
-    if Hardware::CPU.arm?
+    on_arm do
       url "https://github.com/wild-linker/wild/releases/download/#{version}/wild-linker-#{version}-aarch64-unknown-linux-gnu.tar.gz"
       sha256 "4de1727db12347c6fbb9fbf67a4b0f15e0344e6de8bb3c0143876d2464143861"
-    else
+    end
+
+    on_intel do
       url "https://github.com/wild-linker/wild/releases/download/#{version}/wild-linker-#{version}-x86_64-unknown-linux-gnu.tar.gz"
       sha256 "44ed25fff3657ca62c25a441e60861d4a4061b44c096b998699cc86fa596490b"
     end
