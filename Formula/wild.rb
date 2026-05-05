@@ -19,7 +19,7 @@ class Wild < Formula
 
   def install
     raise "Support for non-Linux platforms not yet available" unless OS.linux?
-    bin.install Dir["*/wild"].first
+    bin.install buildpath.glob("*/wild").fetch(0)
   end
 
   test do
