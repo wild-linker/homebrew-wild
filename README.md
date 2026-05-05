@@ -1,5 +1,9 @@
 # Brew packages for the Wild linker
 
+```sh
+brew install wild-linker/wild/wild
+```
+
 For details about the Wild linker, see [the main repository](http://github.com/wild-linker/wild).
 
 ## License
