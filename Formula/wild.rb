@@ -2,19 +2,19 @@
 class Wild < Formula
   desc "Fast linker for Linux"
   homepage "https://github.com/wild-linker/wild"
-  version "0.9.0"
+  version "0.10.0"
   license any_of: ["MIT", "Apache-2.0"]
   depends_on :linux
 
   on_linux do
     on_arm do
       url "https://github.com/wild-linker/wild/releases/download/#{version}/wild-linker-#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "8855a347b9dfbc762e2492125ee82d09313124da3be616b1cd027a14eddfe8c0"
+      sha256 "e9d670e41f76481a68984f816e25bd2f124664db3ac935053e1a6fc41d2894c2"
     end
 
     on_intel do
       url "https://github.com/wild-linker/wild/releases/download/#{version}/wild-linker-#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "deb6ee0e5caec798053ec4aafaba042e20a8edf91f08cb4d36268571cc628d3b"
+      sha256 "641265506a7c06cfb03181b8916ab663ec8407855db6d4db7f8450667d105283"
     end
   end
 
