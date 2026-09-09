@@ -25,11 +25,14 @@ class Wild < Formula
 
   def install
     raise "Support for non-Linux platforms not yet available" unless OS.linux?
+
     bin.install "wild"
+    bin.install_symlink "wild" => "ld.wild"
   end
 
   test do
     assert_match version.to_s, shell_output("#{bin}/wild --version")
+    assert_match version.to_s, shell_output("#{bin}/ld.wild --version")
   end
 end
 EOF
